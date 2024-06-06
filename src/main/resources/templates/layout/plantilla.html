@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    
+    <header th:fragment="header">
+      <h1 th:text="#{plantilla.titulo}">Titulo</h1>
+    </header>
+    
+    <footer th:fragment="footer">
+      <p> [[#{plantilla.pie-pagina}]] <a href="https://www.google.com.mx" target="_blank">Google.com</a></p>
+    </footer>
+    
+  </body>
+</html>
