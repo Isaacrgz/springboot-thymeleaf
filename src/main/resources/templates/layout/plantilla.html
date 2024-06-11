@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <head>
     <title>TODO supply a title</title>
     <meta charset="UTF-8">
@@ -19,7 +22,9 @@
       </div>
       <span> [[#{plantilla.pie-pagina}]] <a href="https://www.google.com.mx" target="_blank">Google.com</a></span>
       <form method="POST" th:action="@{/logout}">
-        <a href="#" onclick="this.parentNode.submit();">Logout</a>
+        <b>User: </b><span sec:authentication="name">Usuario que hizo login</span> |
+        <b>Roles: </b><span sec:authentication="principal.authorities">Roles</span> |
+        <a href="#" onclick="this.parentNode.submit();">Logout</a> 
       </form>
     </footer>
 
